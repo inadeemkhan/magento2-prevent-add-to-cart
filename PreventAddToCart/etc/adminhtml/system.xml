@@ -2,18 +2,26 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
 	<system>
 		<tab id="nadeem" translate="label" sortOrder="999">
-			<label>nadeem</label>
+			<label>Nadeem</label>
 		</tab>
 		<section id="prevent_addtocart" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-			<label>prevent_addtocart</label>
+			<label>Prevent Add To Cart</label>
 			<tab>nadeem</tab>
 			<resource>Nadeem_PreventAddToCart::config_nadeem_preventaddtocart</resource>
 			<group id="general" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
 				<label>general</label>
 				<field id="is_enable" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
-					<label>is_enable</label>
-					<comment/>
+					<label>Enable</label>
 					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					<comment><![CDATA[ Enable module.]]></comment>
+				</field>
+				<field id="error_message" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Error Message</label>
+					<comment><![CDATA[ Enter error message here to showing while customer adding product into cart without login.]]></comment>
+				</field>
+				<field id="redirect_uri" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Redirect Uri</label>
+					<comment><![CDATA[ To redirect in the case of prevent.]]></comment>
 				</field>
 			</group>
 		</section>
